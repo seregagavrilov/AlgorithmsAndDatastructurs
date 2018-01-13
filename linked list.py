@@ -41,10 +41,22 @@ class LinkedList():
             self.last.next = newnode
             self.last = newnode
 
+    def push(self, x):
+
+        if self.first is None:
+            newnode = NodeList(x)
+            self.first = newnode
+            self.last = newnode
+        else:
+            self.first = NodeList(x, self.first)
+
+
+
 l = LinkedList()
 
 l.add(1)
 l.add(3)
 l.add(4)
 l.add(5)
+l.push(10)
 print(l)
