@@ -49,7 +49,7 @@ class LinkedList():
             self.last = newnode
         else:
             self.first = NodeList(x, self.first)
-
+    
 
 
 l = LinkedList()
