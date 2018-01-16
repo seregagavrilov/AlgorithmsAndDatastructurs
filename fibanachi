@@ -1,0 +1,27 @@
+
+def fib(n):
+
+    f = list(range(n))
+
+    listans = [1,1]
+
+    for i in f[2:]:
+
+        listans.append(listans[i-1]+listans[i-2])
+
+    return listans.pop()
+
+
+def fibrecur(n):
+
+    if n > 1:
+
+        return fib(n - 2) + fib(n - 1)
+
+    else:
+
+        return n
+
+n = 12
+
+print(fib(n))
